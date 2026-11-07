@@ -1,0 +1,30 @@
+:root {
+  --dark: #121313;
+  --deep: #090a0a;
+  --surface: #f2efe7;
+  --white: #fff;
+  --light: #f6f2e9;
+  --ink: #171818;
+  --muted: #aaa9a3;
+  --muted-light: #62645f;
+  --accent: #f4511e;
+  --accent-hover: #e94a19;
+  --accent-light: #ff845c;
+  --line-dark: #363837;
+  --line-light: #c9c7c0;
+  --focus: #ffb08f;
+  --error: #c73636;
+  --error-light: #ffa49a;
+  --display: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Golos Text', 'Segoe UI', Arial, sans-serif;
+  --section-space: clamp(72px, 8vw, 116px);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+}

@@ -1,0 +1,357 @@
+.visit,
+.packages,
+.rules,
+.faq {
+  padding: var(--section-space) 0;
+}
+.visitHead,
+.packageHead {
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 48px;
+}
+.visitHead h2,
+.packageHead h2 {
+  max-width: 12ch;
+}
+.visitHead > p,
+.packageHead > p {
+  font-size: 16px;
+  color: var(--muted-light);
+  margin: 0;
+  max-width: 36ch;
+}
+.steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+.steps li {
+  padding-top: 20px;
+  border-top: 1px solid var(--line-light);
+}
+.number {
+  font: 600 40px/1 var(--display);
+  color: var(--muted-light);
+  display: block;
+  margin-bottom: 36px;
+}
+.steps h3 {
+  font: 600 25px/1.1 var(--display);
+  margin: 0 0 12px;
+}
+.steps p {
+  font-size: 16px;
+  color: var(--muted-light);
+  margin: 0;
+  max-width: 26ch;
+}
+.fine {
+  font-size: 11px;
+  color: var(--muted-light);
+  max-width: 86ch;
+  margin: 40px 0 0;
+}
+.packages {
+  padding-top: 0;
+}
+.packageHead {
+  padding-top: 72px;
+  border-top: 1px solid var(--line-light);
+}
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.offer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-light);
+  padding: 32px;
+}
+.offerTag {
+  font-size: 10px;
+  color: var(--muted-light);
+  margin-bottom: 32px;
+}
+.offer h3 {
+  font: 600 35px/1.05 var(--display);
+  margin: 0 0 16px;
+}
+.offer > p {
+  font-size: 16px;
+  color: var(--muted-light);
+  margin: 0 0 32px;
+  max-width: 32ch;
+}
+.offerBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 24px;
+}
+.offerBottom span {
+  font-size: 12px;
+  max-width: 13ch;
+}
+.offerBottom strong {
+  font: 700 36px/1 var(--display);
+  white-space: nowrap;
+}
+.offer :global(.button) {
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 12px 16px;
+}
+.rules {
+  background: var(--dark);
+}
+.rulesTop {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 96px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+.rulesTop h2 {
+  max-width: 12ch;
+}
+.rulesTop p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 50ch;
+}
+.rulesTop .rulesLead {
+  font-size: 22px;
+  color: var(--light);
+  margin: 0 0 16px;
+  max-width: 28ch;
+}
+.interior {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.5;
+  object-fit: cover;
+  object-position: center 55%;
+}
+.rulesBottom {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+  margin-top: 40px;
+}
+.rulesBottom > p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+.rulesBottom ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+  padding: 0;
+  margin: 0;
+}
+.rulesBottom li {
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+  align-items: flex-start;
+}
+.rulesBottom svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--muted);
+}
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 96px;
+}
+.faqHint {
+  font-size: 16px;
+  color: var(--muted-light);
+  margin: 24px 0 0;
+}
+.faqItem {
+  border-top: 1px solid var(--line-light);
+}
+.faqItem:last-child {
+  border-bottom: 1px solid var(--line-light);
+}
+.faqItem h3 {
+  margin: 0;
+}
+.faqItem button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 24px 0;
+  text-align: left;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.faqItem button svg {
+  flex: none;
+}
+.faqItem button:hover {
+  color: #a03212;
+}
+.faqItem p {
+  font-size: 16px;
+  max-width: 62ch;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0 40px 24px 0;
+  color: var(--muted-light);
+}
+@media (max-width: 1099px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+  .number {
+    margin-bottom: 24px;
+  }
+  .offer {
+    padding: 24px;
+  }
+  .offer h3 {
+    font-size: 30px;
+  }
+  .offerBottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .offerBottom span {
+    max-width: none;
+  }
+  .rulesTop {
+    gap: 48px;
+  }
+  .faqGrid {
+    gap: 48px;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (max-width: 767px) {
+  .visitHead,
+  .packageHead {
+    display: block;
+    margin-bottom: 32px;
+  }
+  .visitHead > p,
+  .packageHead > p {
+    margin-top: 24px;
+    font-size: 14px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .steps li {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 0 20px;
+  }
+  .number {
+    grid-column: 1;
+    grid-row: 1/3;
+    font-size: 30px;
+    margin: 0;
+  }
+  .steps h3 {
+    grid-column: 2;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .steps p {
+    grid-column: 2;
+    max-width: 32ch;
+  }
+  .fine {
+    font-size: 11px;
+  }
+  .packageHead {
+    padding-top: 48px;
+  }
+  .offers {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .offer {
+    padding: 24px;
+  }
+  .offer h3 {
+    font-size: 32px;
+  }
+  .offerTag {
+    margin-bottom: 24px;
+  }
+  .offer > p {
+    max-width: 38ch;
+    margin-bottom: 28px;
+  }
+  .offerBottom {
+    flex-direction: row;
+    align-items: center;
+  }
+  .offerBottom strong {
+    font-size: 34px;
+  }
+  .rulesTop {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .rulesTop .rulesLead {
+    font-size: 20px;
+  }
+  .interior {
+    aspect-ratio: 4/3;
+  }
+  .rulesBottom {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .rulesBottom ul {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .rulesBottom > p br {
+    display: none;
+  }
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .faqHint {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .faqItem button {
+    padding: 20px 0;
+    font-size: 15px;
+    gap: 20px;
+  }
+  .faqItem p {
+    padding-right: 24px;
+    font-size: 14px;
+  }
+}

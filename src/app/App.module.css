@@ -1,0 +1,94 @@
+.mobileBar {
+  display: none;
+}
+.mismatch {
+  margin: auto;
+  background: var(--surface);
+  color: var(--ink);
+  border: 0;
+  padding: 32px;
+  max-width: min(600px, calc(100% - 32px));
+  max-height: 90dvh;
+}
+.mismatch::backdrop {
+  background: #090a0acc;
+}
+.mismatchTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: start;
+}
+.mismatchTop h2 {
+  font-size: 36px;
+  max-width: 17ch;
+}
+.mismatch p {
+  font-size: 14px;
+  margin: 24px 0;
+  max-width: 60ch;
+}
+.compatible {
+  display: grid;
+}
+.compatible button {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--line-light);
+  min-height: 60px;
+  padding: 16px 0;
+  color: var(--ink);
+  font-size: 14px;
+}
+.compatible button:hover {
+  color: #a03213;
+}
+.compatible strong {
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .mobileBar {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px max(12px, env(safe-area-inset-bottom));
+    background: var(--dark);
+    border-top: 1px solid var(--line-dark);
+  }
+  .mobileBar > div {
+    min-width: 0;
+  }
+  .mobileBar span {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+  }
+  .mobileBar strong {
+    font: 700 24px var(--display);
+  }
+  .mobileBar :global(.button) {
+    font-size: 14px;
+    min-height: 44px;
+    padding: 12px 16px;
+    flex: none;
+  }
+  .mismatch {
+    padding: 24px;
+  }
+  .mismatchTop h2 {
+    font-size: 30px;
+  }
+}
