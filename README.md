@@ -1,5 +1,7 @@
 # Лезвие — концепт городского барбершопа
 
+[Сайт на GitHub Pages](https://miffis-gg.github.io/lezvie/) · [Репозиторий](https://github.com/miffis-gg/lezvie)
+
 Полный одностраничный сайт для портфолио: React 18, Vite, строгий TypeScript и CSS Modules. Проект реализует утверждённые PRODUCT.md, DESIGN.md и STRUCTURE.md. Визуальная система сохранена: графитовые поля, тёплый светлый прайс, оранжевые действия, локальные Roboto Condensed и Golos Text. Фотография отделена от HTML-интерфейса.
 
 ## Запуск
@@ -65,11 +67,11 @@ node scripts/browser-qa.mjs
 
 ## GitHub Pages
 
-Реального деплоя не было. Workflow `.github/workflows/pages.yml` запускается **только вручную** через Actions → Build and deploy GitHub Pages → Run workflow. Автоматической публикации при push нет.
+GitHub Pages настроен на https://miffis-gg.github.io/lezvie/. Workflow `.github/workflows/pages.yml` запускается **только вручную** через Actions → Build and deploy GitHub Pages → Run workflow. Автоматической публикации при push нет.
 
-1. Создать репозиторий и загрузить исходники вместе с package-lock.json.
-2. В Settings → Pages выбрать Source: GitHub Actions.
-3. Вручную запустить workflow, когда публикация разрешена. Он выполняет установку, TypeScript, тесты, сборку и Pages deploy.
+1. Загрузить обновления в `main` вместе с актуальным package-lock.json.
+2. В Actions выбрать Build and deploy GitHub Pages и вручную запустить workflow.
+3. Дождаться успешного завершения. Workflow выполняет установку, TypeScript, тесты, сборку и Pages deploy. В Settings → Pages уже выбран Source: GitHub Actions.
 
 Workflow передаёт `VITE_BASE_PATH=/<имя-репозитория>/`. Для пользовательского репозитория `<username>.github.io` или собственного домена заменить его на `/`. Для локальной сборки по умолчанию используется `./`.
 
@@ -79,7 +81,7 @@ Workflow передаёт `VITE_BASE_PATH=/<имя-репозитория>/`. Д
 VITE_BASE_PATH=/lezvie/
 ```
 
-Без маршрутизатора: URL содержит только якоря, обновление опубликованного адреса не требует серверных перенаправлений. После появления окончательного URL добавить canonical и абсолютные `og:url` / `og:image`. До этого фиктивные URL не добавляются. LocalBusiness schema с вымышленными контактами не используется.
+Без маршрутизатора: URL содержит только якоря, обновление опубликованного адреса не требует серверных перенаправлений. В index.html указаны canonical и абсолютные `og:url` / `og:image` для опубликованного адреса. При переносе на другой домен обновить их. LocalBusiness schema с вымышленными контактами не используется.
 
 ## Skills и ассеты
 
