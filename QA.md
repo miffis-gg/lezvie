@@ -65,10 +65,11 @@ LCP: 3,2 s. CLS: 0,007. Целевые пороги из AGENTS.md достиг�
 
 Локальные отчёты: `test-results/browser-qa.json`, `accessibility.json`, `lighthouse.html`, `lighthouse.json`, `zoom-200.json`, `impeccable-detect.json`. Скриншоты: `.impeccable/review/desktop.png`, `mobile.png`, `768.png`, `1280.png`, четыре hero, состояния формы и `zoom-200.png`. Эти generated-папки исключены из Git; скрипты проверки входят в исходники.
 
-## Перед публикацией и границы проверки
+## Публикация и границы проверки
 
-- Создать GitHub-репозиторий, загрузить исходники, выбрать GitHub Actions в Pages и вручную запустить подготовленный workflow после разрешения на публикацию.
-- Для user-site `<username>.github.io`/собственного домена выбрать base `/`; для обычного репозитория workflow подставит его имя.
-- После появления окончательного адреса добавить canonical, og:url и абсолютный og:image. Фиктивные URL не публиковались.
-- Деплой и проверка настоящего GitHub Pages URL не выполнялись. Safari, Firefox, реальные iOS/Android и отдельный screen reader не проверялись.
+- По отдельному разрешению пользователя создан [репозиторий miffis-gg/lezvie](https://github.com/miffis-gg/lezvie) и включён GitHub Pages через Actions.
+- [Запуск публикации 42389303652](https://github.com/miffis-gg/lezvie/actions/runs/42389303652): build и deploy завершились успешно. Опубликованный исходный коммит: `ad71950829d5657d7465a6f1d9a926e8482715be`.
+- [Сайт](https://miffis-gg.github.io/lezvie/) возвращает HTTP 200. Проверены реальные опубликованные JS, CSS, hero.webp, оба кириллических WOFF2 и favicon — HTTP 200; повторное открытие страницы — HTTP 200. HTTPS принудительно включён.
+- Для публикации использован base `/lezvie/`. Canonical, og:url и абсолютный og:image настроены на реальный адрес. Для последующих обновлений загрузить изменения в main и вручную запустить workflow.
+- Safari, Firefox, реальные iOS/Android и отдельный screen reader не проверялись. Проверка браузерных сценариев относится к production preview; после деплоя проверены публичный HTML и ресурсы по HTTP.
 - Барбершоп, люди, фотографии работ, слоты и контакты демонстрационные. Реальной системы записи и оплаты нет по заданию.
